@@ -1,0 +1,84 @@
+/*  */
+/*dragons starting here*/
+.a-enter-vr{display:none!important;}
+
+.vizcontainer{
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+  background-color:gray;
+  min-height: 100%;
+  height:80vh; 
+  flex-flow: row wrap;
+  top:0;
+}
+.aframecontainer{
+  display: inline-flex;
+  height: 90%;
+  min-width: 65%;
+  width: 65%;
+  background-color:lightgray;
+  flex:1;
+  -webkit-flex:1;
+  top:0;
+ }
+.a-scene {
+  display: block;
+  position:absolute!important;
+  height: inherit!important;
+  width: inherit!important;
+}
+.a-scene.fullscreen .a-canvas {
+  width: inherit!important;
+  height: inherit!important;
+  top: 0!important;
+  left: 0!important;
+  right: 0!important;
+  bottom: 0!important;
+  position: fixed!important;
+}
+.navbar{
+  align-self: flex-start;
+  vertical-align: top;
+  flex-wrap: nowrap;
+  float: left;
+  max-height:10vh;
+  width: 100vw;
+  background-color: gray;
+  flex:-1;
+  -webkit-flex:-1;
+}
+
+.sidebarcontainer{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  height: 100%;
+  width:100%;
+  background-color: pink;
+  flex: 3;
+  -webkit-flex:3;
+}
+
+.cameraleft,.cameraright,.cameraback,.cameratop{
+  display:flex;
+  justify-content: center;
+  height:25%;
+  min-width:250px;
+  padding: 5px;
+  margin-bottom: 1px;
+  background-color: white;
+}
+.sidebarcontainer:last-child{
+  margin-bottom:0px;
+}
+
+
+@media all and (max-width: 500px) {
+  .vizcontainer{flex-flow: column wrap;}
+  .navbar    { flex: -1 0px; }
+  .aframecontainer    { order: 1;width: 100vw;height:30vh;display:flex;}
+  .sidebarcontainer { order: 3; height:70vh;align-self:baseline;display:flex;min-width: 100vw;}
+  .a-enter-vr{display:none!important;}
+  
+}
